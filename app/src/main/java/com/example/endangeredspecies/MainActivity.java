@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
             // Update the image in this ImageView to the currently clicked animal
             pic.setImageResource(animals[position]);
+            pic.setScaleType (ImageView.ScaleType.CENTER_CROP);
 
             return pic;
         }
