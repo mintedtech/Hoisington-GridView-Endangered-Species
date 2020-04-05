@@ -1,10 +1,7 @@
 package com.example.endangeredspecies;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.os.Bundle;
-
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -13,6 +10,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.google.android.material.snackbar.Snackbar;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -75,10 +74,12 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            ImageView pic = new ImageView(context);
+            // If this method was called to fill an empty portion of the grid then create new...
+            // but if this is updating due to scrolling, then use the existing ImageView in the grid
+            ImageView pic = convertView == null ? new ImageView(context) : (ImageView)convertView;
+
+            // Update the image in this ImageView to the currently clicked animal
             pic.setImageResource(animals[position]);
-            pic.setScaleType(ImageView.ScaleType.FIT_CENTER);
-            pic.setLayoutParams(new GridView.LayoutParams(250,250));
 
             return pic;
         }
