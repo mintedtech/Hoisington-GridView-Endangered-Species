@@ -6,23 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <GridView
-        android:id="@+id/gridView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/standard_margin"
-        android:layout_marginLeft="@dimen/standard_margin"
-        android:layout_marginTop="@dimen/standard_margin"
-        android:layout_marginEnd="@dimen/standard_margin"
-        android:layout_marginRight="@dimen/standard_margin"
-        android:layout_marginBottom="@dimen/standard_margin"
-        android:numColumns="auto_fit"
-        android:verticalSpacing="@dimen/standard_margin"
-        android:horizontalSpacing="@dimen/standard_margin"
-        android:stretchMode="columnWidth"
+    <include
+        layout="@layout/include_card_grid"
+        style="@style/ImageAndGridCardStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -30,23 +19,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent=".6" />
+        app:layout_constraintGuide_percent=".45" />
 
-    <ImageView
-        android:id="@+id/imgLarge"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/standard_margin"
-        android:layout_marginLeft="@dimen/standard_margin"
-        android:layout_marginTop="@dimen/standard_margin"
-        android:layout_marginEnd="@dimen/standard_margin"
-        android:layout_marginRight="@dimen/standard_margin"
-        android:layout_marginBottom="@dimen/standard_margin"
-        android:contentDescription="@string/imgLarge"
-        android:scaleType="fitCenter"
+    <include
+        layout="@layout/include_card_image"
+        style="@style/ImageAndGridCardStyle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<com.google.android.material.card.MaterialCardView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ImageAndGridCardStyle"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/guideline"
+    tools:showIn="@layout/activity_main">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"
+        android:id="@+id/imgLarge"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/standard_margin"
+        android:contentDescription="@string/imgLarge"
+        android:scaleType="fitCenter"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+</com.google.android.material.card.MaterialCardView>

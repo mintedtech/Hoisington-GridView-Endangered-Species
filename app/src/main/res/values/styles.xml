@@ -1,11 +1,10 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="ImageAndGridCardStyle" parent="Widget.Material3.CardView.Elevated">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_margin">@dimen/standard_margin</item>
+        <item name="cardCornerRadius">@dimen/standard_margin</item>
     </style>
 
 </resources>

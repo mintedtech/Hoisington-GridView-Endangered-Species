@@ -1,4 +1,4 @@
-package com.example.endangeredspecies;
+package com.mintedtech.endangeredspecies;
 
 import org.junit.Test;
 
