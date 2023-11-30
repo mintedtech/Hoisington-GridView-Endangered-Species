@@ -12,7 +12,6 @@
     tools:showIn="@layout/activity_main">
 
     <com.google.android.material.imageview.ShapeableImageView
-        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"
         android:id="@+id/imgLarge"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
